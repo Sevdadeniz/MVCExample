@@ -1,0 +1,33 @@
+﻿@model List<MVCExample.Models.Product>
+
+<h2>View  Bagle nesne gönderimi</h2>
+<ul>
+	@*Dinamik olarak verilerimi taşıyorum*@
+
+	@foreach (var product in ViewBag.products as List<MVCExample.Models.Product>)
+	{
+		<li>
+			@product.ProductName
+		</li>
+
+	}
+</ul>
+
+
+
+
+
+<h2>View  Data kullanımı</h2>
+<ul>
+	@*Object olarak getirip unboxing yaptım*@
+
+	@foreach (var product in ViewData["products"] as List<MVCExample.Models.Product>)
+	{
+		<li>
+			@product.ProductName
+		</li>
+
+	}
+</ul>
+
+

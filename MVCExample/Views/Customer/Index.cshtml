@@ -1,0 +1,12 @@
+﻿<h2>View  Bagle nesne gönderimi</h2>
+<ul>
+	@*Dinamik olarak verilerimi taşıyorum*@
+
+	@foreach (var customer in ViewBag.customers as List<MVCExample.Models.Customer>)
+	{
+		<li>
+			@customer.CustomerName
+		</li>
+
+	}
+</ul>
